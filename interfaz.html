@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Iso&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Rubik+Iso&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="calculadora sectionAzul">
+        <div class="numeros">
+        <input class="inputResultado" type="text" placeholder="..." readonly>
+        <input class="numero1 inputAzul inputNumeros" type="text" placeholder="0">
+        <input class="numero2 inputAzul inputNumeros" type="text" placeholder="0">
+       
+        </div>
+        <div class="botones">
+            <button class="btnCA azul operador" >CA</button>
+            <button class="btnC azul operador">C</button>
+            <button class="btnPorcent azul operador">%</button>
+            <button class="btnDiv azul operador">/</button>
+            <button class="btn1 colorNumeros">1</button>
+            <button class="btn2 colorNumeros">2</button>
+            <button class="btn3 colorNumeros">3</button>
+            <button class="btnMult  azul operador">X</button>
+            <button class="btn4 colorNumeros">4</button>
+            <button class="btn5 colorNumeros">5</button>
+            <button class="btn6 colorNumeros">6</button>
+            <button class="btnMenos azul operador">-</button>
+            <button class="btn7 colorNumeros">7</button>
+            <button class="btn8 colorNumeros">8</button>
+            <button class="btn9 colorNumeros">9</button>
+            <button class="btnMas azul operador">+</button>
+            <button class="btnPunto colorNumeros">.</button> 
+            <button class="btn0 colorNumeros">0</button>           
+           
+           
+            <button class="btnContinuar igual azul operador">Continuar</button>
+            <div class="contenedor2">
+                <div class="colores">
+                    <input class="botonColor botonAzul" type="radio" name="opciones" id="opcion1" checked>
+                    <label for="opcion1">Azul</label>
+                </div>
+                <div class="colores">
+                    <input class="botonColor botonVerde" type="radio" name="opciones" id="opcion2">
+                    <label for="opcion1">Verde</label>
+                </div>
+                <div class="colores">
+                    <input class="botonColor botonRojo" type="radio" name="opciones" id="opcion3">
+                    <label for="opcion1">Rojo</label>
+                </div>   
+            </div>
+        </div>
+    </secction>
+    <script src="colores.js"></script>
+    <script src="funcionalidad.js"></script>
+</body>
+</html>
