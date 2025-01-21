@@ -51,7 +51,7 @@ const operaciones = {
         seleccionarInput();
     },
     division: (num1, num2) =>{
-        if(divicionInvalida){
+        if(divisionInvalida){
             inputResultado.value = "";
             divisionInvalida = false;
         }else{
@@ -192,16 +192,11 @@ btnPunto.addEventListener("click", ()=>{
     agregarNumero(".");
    
 })
-// btnContinuar.addEventListener("click", ()=>{
-//     inputActivo()
-//     inputActual.value += ".";
-//     agregarNumero(".");
-   
-// })
 
 
-// OPERADORES
-let validacion = () =>{
+
+//  ************* FUNCTION VALIDATION *************
+let validacion = (n1, n2) =>{
     num1 = numero1.value;
     num2 = numero2.value;
     if(num1 == NaN || num1 == "" ){
@@ -212,17 +207,21 @@ let validacion = () =>{
     }
     num1 = parseFloat(num1);
     num2 = parseFloat(num2);
-    if(operador == "/" && num2 == 0){
-        alert(`No se puede dividir por 0`)
-        divicionInvalida = true;
-    }
+        if(operador == "/" && num2 == 0){
+            alert(`No se puede dividir por 0`);
+            
+            divisionInvalida = true;
+        }else{
+            divisionInvalida = false;
+        }
+    
 }
+// OPERADORES
 
 btnMas.addEventListener("click", ()=>{
     operador = "+";
-   validacion();
-//    alert(`num1: ${num1}, num2: ${num2}`)
-   operaciones.suma(num1, num2); 
+    validacion();
+    operaciones.suma(num1, num2); 
 })
 
 btnMenos.addEventListener("click", () => {
@@ -239,7 +238,7 @@ btnMult.addEventListener("click", () =>{
 btnDiv.addEventListener("click", () => {
     operador = "/";
     validacion();
-    operaciones.division(num1, num2);
+     operaciones.division(num1, num2);  
 })
 btnPorcent.addEventListener("click", () =>{
     operador = "%";
@@ -254,12 +253,6 @@ function inputActivo(){
     }else{
 
     }
-
-    // if(numero1.classList.contains("input-actual") || numero2.classList.contains("input-actual")){
-
-    // }else{
-    //     alert("Selecciona la casilla donde se van a ingresar los primeros digítos");
-    // }
 }
 
 
